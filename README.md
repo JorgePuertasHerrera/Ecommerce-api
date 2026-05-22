@@ -1,44 +1,30 @@
-Ecommerce API
+# 🛒 Ecommerce API
 
-API REST para un ecommerce construida con FastAPI y PostgreSQL.
+¡Bienvenido a **Ecommerce API**! Una API REST robusta y escalable diseñada para gestionar un sistema de comercio electrónico, construida con **FastAPI** y **PostgreSQL**, y completamente empaquetada con **Docker** para un despliegue ágil en cualquier entorno.
 
-## Tecnologías
+El proyecto cuenta con arquitectura limpia, validación de datos estricta y un sistema seguro de autenticación por tokens.
 
-- FastAPI
-- PostgreSQL
-- SQLAlchemy
-- JWT (autenticación)
-- Pydantic
+---
 
-## Instalación
+## 🛠️ Tecnologías Utilizadas
 
-1. Clona el repositorio
-git clone https://github.com/JorgePuertasHerrera/ecommerce-api.git
-cd ecommerce-api
+* **Framework principal:** Python 3.11 & FastAPI
+* **Base de datos:** PostgreSQL
+* **ORM:** SQLAlchemy (para el mapeo de datos)
+* **Validación de datos:** Pydantic V2
+* **Seguridad:** Autenticación mediante tokens JWT (JSON Web Tokens)
+* **Contenedores:** Docker & Docker-slim (optimizado para producción)
+* **Servidor ASGI:** Uvicorn
+* **Pruebas:** Pytest (en la carpeta `/test`)
 
-2. Crea el entorno virtual
-python3.11 -m venv venv311
-source venv311/bin/activate
+---
 
-3. Instala dependencias
-pip install -r requirements.txt
+## 🔒 Variables de Entorno y Seguridad
 
-4. Crea el archivo .env
+El proyecto utiliza un archivo `.env` local para gestionar de manera segura las credenciales y configuraciones sensibles. Este archivo está blindado mediante `.gitignore` y **nunca** se sube al repositorio público.
+
+Para que la API funcione, se debe crear un archivo llamado `.env` en la raíz con la siguiente estructura:
+
+```env
 DATABASE_URL=postgresql://usuario:password@localhost:5432/ecommerce_db
-SECRET_KEY=tu-clave-secreta
-
-5. Arranca el servidor
-python3.11 -m uvicorn app.main:app --reload
-
-## Endpoints
-
-- POST /users/register — Registro de usuario
-- POST /users/login — Login y obtención de token JWT
-- GET /products — Listar productos
-- POST /products — Crear producto (requiere token)
-- PUT /products/{id} — Editar producto (requiere token)
-- DELETE /products/{id} — Eliminar producto (requiere token)
-
-## Documentación
-
-Disponible en http://localhost:8000/docs
+SECRET_KEY=tu-clave-secreta-super-segura
