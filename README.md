@@ -19,12 +19,4 @@ El proyecto cuenta con arquitectura limpia, validación de datos estricta y un s
 
 ---
 
-## 🔒 Variables de Entorno y Seguridad
 
-El proyecto utiliza un archivo `.env` local para gestionar de manera segura las credenciales y configuraciones sensibles. Este archivo está blindado mediante `.gitignore` y **nunca** se sube al repositorio público.
-
-Para que la API funcione, se debe crear un archivo llamado `.env` en la raíz con la siguiente estructura:
-
-```env
-DATABASE_URL=postgresql://usuario:password@localhost:5432/ecommerce_db
-SECRET_KEY=tu-clave-secreta-super-segura
