@@ -1,0 +1,7 @@
+# Ignora absolutamente todo por defecto
+**
+
+# Deja pasar SOLO lo necesario
+!app/
+!requirements.txt
+!Dockerfile
